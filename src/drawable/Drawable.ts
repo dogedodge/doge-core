@@ -48,11 +48,9 @@ export class Drawable {
      * @param scaleY 
      */
     scale(scaleX: number, scaleY?: number) {
-        if (scaleX === void 0) {
-            this.scaleX = 1;
-        } else {
-            this.scaleX = scaleX;
-        }
+
+        this.scaleX = scaleX;
+
         if (scaleY === void 0) {
             this.scaleY = this.scaleX;
         } else {
