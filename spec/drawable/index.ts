@@ -1,1 +1,2 @@
-import './Drawable.spec'
+import './Drawable.spec';
+import './DrawableSet.spec';

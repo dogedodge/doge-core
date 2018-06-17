@@ -2,8 +2,8 @@ export class Drawable {
     parent: Drawable;
     x: number = 0;
     y: number = 0;
-    stageX: number = 0;
-    stageY: number = 0;
+    // stageX: number = 0;
+    // stageY: number = 0;
     rotation: number = 0;
     anchorX: number = 0;
     anchorY: number = 0;
@@ -20,17 +20,17 @@ export class Drawable {
     }
 
     draw(ctx: CanvasRenderingContext2D) {
-        if (!this.parent) {
-            // only stage has no parent
-            this.stageX = 0;
-            this.stageY = 0;
-        } else {
-            this.stageX = this.parent.stageX + this.x;
-            this.stageY = this.parent.stageY + this.y;
-        }
+        // if (!this.parent) {
+        //     // only stage has no parent
+        //     this.stageX = 0;
+        //     this.stageY = 0;
+        // } else {
+        //     this.stageX = this.parent.stageX + this.x;
+        //     this.stageY = this.parent.stageY + this.y;
+        // }
         ctx.save();
         // todo: use transform instead
-        ctx.translate(this.stageX, this.stageY);
+        ctx.translate(this.x, this.y);
         if (this.rotation % 360 !== 0) {
             ctx.rotate(this.rotation * Math.PI / 180);
         }
