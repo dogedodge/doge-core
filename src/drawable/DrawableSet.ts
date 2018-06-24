@@ -4,10 +4,10 @@ export class DrawableSet extends Drawable {
     protected childSet: Set<Drawable>;
 
     constructor(
-        _width: number = 0,
-        _height: number = 0
+        width?: number,
+        height?: number
     ) {
-        super(_width, _height);
+        super(width, height);
         this.childSet = new Set();
     }
 

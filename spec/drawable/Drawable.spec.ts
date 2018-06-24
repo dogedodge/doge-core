@@ -19,19 +19,10 @@ describe('Drawable', () => {
         drawable.y = _y;
     });
 
-    // it('can calculate coordinate on stage', () => {
-    //     drawable.draw(ctx);
-    //     expect(drawable.parent).not.toBeDefined();
-    //     expect(drawable.stageX).toEqual(0);
-    //     expect(drawable.stageY).toEqual(0);
-    //     let mockParent = new Drawable();
-    //     mockParent.stageX = integer(0, 1000);
-    //     mockParent.stageY = integer(0, 1000);
-    //     drawable.parent = mockParent;
-    //     drawable.draw(ctx);
-    //     expect(drawable.stageX).toEqual(mockParent.stageX + _x);
-    //     expect(drawable.stageY).toEqual(mockParent.stageY + _y);
-    // });
+    it('present corrected width & height', () => {
+        expect(drawable.width).toEqual(_width);
+        expect(drawable.height).toEqual(_height);
+    });
 
     it('can scale', () => {
         let sx = integer(0, 100);

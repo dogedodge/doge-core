@@ -7,8 +7,8 @@ export class Drawable {
     rotation: number = 0;
     anchorX: number = 0;
     anchorY: number = 0;
-    scaleX: number = 0;
-    scaleY: number = 0;
+    scaleX: number = 1;
+    scaleY: number = 1;
 
     constructor(
         /** width without scale */
