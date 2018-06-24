@@ -10,4 +10,7 @@ const graphic = new doge.Graphic((ctx) => {
 });
 stage.add(graphic);
 
+const img = new doge.DrawableImage('./assets/doge.png');
+stage.add(img);
+
 stage.draw();

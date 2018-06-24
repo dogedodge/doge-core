@@ -12,9 +12,9 @@ export class Drawable {
 
     constructor(
         /** width without scale */
-        protected _width: number = 0,
+        protected _width?: number,
         /** height without scale */
-        protected _height: number = 0
+        protected _height?: number
     ) {
 
     }
@@ -62,6 +62,9 @@ export class Drawable {
         this._width = w;
     }
     get width(): number {
+        if (this._width === void 0) {
+            return 0;
+        }
         return this._width * this.scaleX;
     }
 
@@ -69,6 +72,9 @@ export class Drawable {
         this._height = h;
     }
     get height(): number {
+        if (this._height === void 0) {
+            return 0;
+        }
         return this._height * this.scaleY;
     }
 
